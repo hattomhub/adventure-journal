@@ -13,7 +13,6 @@ public class User extends AbstractModel {
     private String username;
 
     @Column(name = "email", unique = true)
-    @Email
     private String email;
     private String md5passwd;
 
