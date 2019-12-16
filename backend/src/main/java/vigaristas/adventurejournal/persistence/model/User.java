@@ -43,7 +43,7 @@ public class User extends AbstractModel {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "UserDao{" +
                 "username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 '}';
