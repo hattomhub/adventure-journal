@@ -6,7 +6,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Email;
 
 @Entity
-@Table(name = "user")
+@Table(name = "userTable")
 public class User extends AbstractModel {
 
     @Column(name = "username", unique = true)
@@ -14,6 +14,7 @@ public class User extends AbstractModel {
 
     @Column(name = "email", unique = true)
     private String email;
+
     private String md5passwd;
 
     public String getUsername() {

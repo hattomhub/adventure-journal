@@ -12,7 +12,7 @@ public class AdventureDto {
 
     private String location;
 
-    private String type;
+    private String adventureType;
 
     private String imgUrl;
 
@@ -52,12 +52,12 @@ public class AdventureDto {
         this.location = location;
     }
 
-    public String getType() {
-        return type;
+    public String getAdventureType() {
+        return adventureType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setAdventureType(String adventureType) {
+        this.adventureType = adventureType;
     }
 
     public String getImgUrl() {
@@ -91,7 +91,7 @@ public class AdventureDto {
                 ", title='" + title + '\'' +
                 ", sDisc='" + sDisc + '\'' +
                 ", location='" + location + '\'' +
-                ", type='" + type + '\'' +
+                ", adventureType='" + adventureType + '\'' +
                 ", imgUrl='" + imgUrl + '\'' +
                 ", score=" + score +
                 ", creationTime=" + creationTime +

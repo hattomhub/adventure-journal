@@ -10,7 +10,7 @@ public class Adventure extends AbstractModel {
     private String title;
     private String sDesc;
     private String location;
-    private String Type;
+    private String adventureType;
     private String imgUrl;
     private Integer score;
 
@@ -38,12 +38,12 @@ public class Adventure extends AbstractModel {
         this.location = location;
     }
 
-    public String getType() {
-        return Type;
+    public String getAdventureType() {
+        return adventureType;
     }
 
-    public void setType(String type) {
-        Type = type;
+    public void setAdventureType(String adventureType) {
+        this.adventureType = adventureType;
     }
 
     public String getImgUrl() {
@@ -68,7 +68,7 @@ public class Adventure extends AbstractModel {
                 "title='" + title + '\'' +
                 ", sDesc='" + sDesc + '\'' +
                 ", location='" + location + '\'' +
-                ", Type='" + Type + '\'' +
+                ", adventureType='" + adventureType + '\'' +
                 ", imgUrl='" + imgUrl + '\'' +
                 ", score=" + score +
                 '}';

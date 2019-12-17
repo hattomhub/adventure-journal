@@ -23,6 +23,7 @@ public class UserDtoToUser implements Converter<UserDto, User> {
 
         User user = (userDto.getId() != null ? userService.get(userDto.getId()) : new User());
 
+        user.setId(userDto.getId());
         user.setUsername(userDto.getUsername());
         user.setEmail(userDto.getEmail());
         user.setMd5passwd(userDto.getMd5Passwd());

@@ -12,7 +12,7 @@ import java.util.List;
 // TODO: 2019-12-16 missing profiles
 public class AdventureServiceImpl implements AdventureService {
 
-    public AdventureDao adventureDao;
+    private AdventureDao adventureDao;
 
     @Autowired
     public void setAdventureDao(AdventureDao adventureDao) {
@@ -31,7 +31,7 @@ public class AdventureServiceImpl implements AdventureService {
 
     @Transactional
     @Override
-    public void addAdventure(Adventure adventure) {
-        adventureDao.saveOrUpdate(adventure);
+    public Adventure save(Adventure adventure) {
+        return adventureDao.saveOrUpdate(adventure);
     }
 }

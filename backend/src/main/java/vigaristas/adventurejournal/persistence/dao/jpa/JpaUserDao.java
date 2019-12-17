@@ -7,7 +7,7 @@ import vigaristas.adventurejournal.persistence.model.User;
 @Repository
 public class JpaUserDao extends GenericJpaDao<User> implements UserDao {
 
-    public JpaUserDao(Class<User> modelType) {
-        super(modelType);
+    public JpaUserDao() {
+        super(User.class);
     }
 }

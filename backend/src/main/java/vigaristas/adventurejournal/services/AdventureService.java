@@ -10,5 +10,5 @@ public interface AdventureService {
 
     List<Adventure> getList();
 
-    void addAdventure(Adventure adventure);
+    Adventure save(Adventure adventure);
 }

@@ -26,7 +26,7 @@ public class AdventureDtoToAdventure extends AbstractConverter<AdventureDto, Adv
         adventure.setLocation(adventureDto.getLocation());
         adventure.setImgUrl(adventureDto.getImgUrl());
         adventure.setScore(adventureDto.getScore());
-        adventure.setType(adventureDto.getType());
+        adventure.setAdventureType(adventureDto.getAdventureType());
 
         return null;
     }

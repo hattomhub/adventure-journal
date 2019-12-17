@@ -7,7 +7,7 @@ import vigaristas.adventurejournal.persistence.model.Adventure;
 @Repository
 public class JpaAdventureDao extends GenericJpaDao<Adventure> implements AdventureDao {
 
-    public JpaAdventureDao(Class<Adventure> modelType) {
-        super(modelType);
+    public JpaAdventureDao() {
+        super(Adventure.class);
     }
 }
