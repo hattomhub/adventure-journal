@@ -1,31 +1,50 @@
-body { 
-  margin: 0;
+body {
+  margin-top: 0;
+  margin-right: auto;
+  margin-left:  auto;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*header*/
+.modal-open{
+  filter: blur(5px);
+}
+
+/*footer*/
 .footer {
-  position: fixed;
-  left: 0;
+  position: absolute;
   bottom: 0;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 10px 10px;
   width: 100%;
-  background-color: #bfbfbf;
-  color: white;
   text-align: center;
 }
 
+/*carousel*/
+.carousel {
+  max-height: 400px;
+}
+
+.carousel-item {
+max-height: 400px;
+}
+
+.carousel-inner {
+  max-height: 400px;
+}
+
+.d-block {
+  max-height: 400px;
+}
+
+/*header*/
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 20px 10px;
 }
 
-.header-right {
-  float: right;
-}
-
 .header a {
-  float: left;
   color: black;
   text-align: center;
   padding: 12px;
@@ -38,28 +57,125 @@ body {
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
+  float: left;
+  text-decoration: none;
 }
 
-.header a:hover {
+.header a.logo:hover {
+  color: #353535;
+}
+
+.header a.button:hover {
   background-color: #ddd;
   color: black;
+  cursor: pointer;
 }
 
 .header a.button {
   background-color: #bfbfbf;
+  border-radius: 1px;
+  float: right;
+  margin-right: 5px;
 }
 
 /*card*/
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.topevents {
+  padding: 20px;
+}
+.eventCard {
+  padding: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
   transition: 0.3s;
-  width: 40%;
+  text-align: center;
+  width: 15%;
+  float: left;
+  cursor: pointer;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.eventCard:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .container {
   padding: 2px 16px;
+  overflow: scroll;
+}
+
+/*PopUp*/
+.modalle {
+  position: fixed;
+  z-index: 1000;
+  width: 50%;
+  height: 50%;
+}
+
+.button_card {
+  background-color: white;
+  position: fixed;
+  top: 25%;
+  left: 12%;
+  right: 50%;
+  width: 75%;
+  height: auto;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  text-align: justify;
+}
+
+.modalle_content {
+background-color: white;
+position: fixed;
+top: 25%;
+left: 12%;
+right: 50%;
+width: 75%;
+height: 60%;
+padding: 20px;
+border-radius: 2px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+overflow: scroll;
+text-align: justify;
+}
+
+.modalle_container {
+  padding: 20px 20px;
+}
+
+.modalle_img {
+  text-align: center !important;
+}
+
+.close {
+  color: black;
+  cursor: pointer;
+  float: right;
+}
+
+.close:hover{
+  color: #bfbfbf;
+  cursor: pointer;
+}
+
+.greyscreen-open{
+  opacity: .5;
+}
+
+.cardimg {
+  position: relative;
+  width: 100%;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }

@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
+import RegisterButton from './register-button';
+import LoginButton from './login-button';
 
 class Header extends Component {
     render() {
         return (
-            <div class="header">
+            <div className="header">
                 <a href="/" class="logo">Adventure Journal</a>
-                <div class="header-right">
-                    <a href="#contact" class="button">Sign in</a>
-                    <a href="#about" class="button">Log in</a>
-                </div>
-
+                <LoginButton />
+                <RegisterButton />
             </div>
         )
     }

@@ -1,15 +1,15 @@
 import React from 'react';
 import Header from './components/header';
-import Footer from './components/footer';
+import Carousel from './components/carousel';
 import Card from './components/card';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Footer from './components/footer';
+import { BrowserRouter, Route} from 'react-router-dom';
 
 const screensRoot = () => (
     <BrowserRouter>
         <Route path='/' component={Header} />
-        <Switch>
-            <Card />
-        </Switch>
+        <Carousel />
+        <Card />
         <Route path='/' component={Footer} />
     </BrowserRouter>
 );
