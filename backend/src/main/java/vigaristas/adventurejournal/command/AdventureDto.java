@@ -1,7 +1,5 @@
 package vigaristas.adventurejournal.command;
 
-import java.util.Date;
-
 public class AdventureDto {
 
     private Integer id;
@@ -17,8 +15,6 @@ public class AdventureDto {
     private String imgUrl;
 
     private Integer score;
-
-    private Date creationTime;
 
     public Integer getId() {
         return id;
@@ -76,14 +72,6 @@ public class AdventureDto {
         this.score = score;
     }
 
-    public Date getCreationTime() {
-        return creationTime;
-    }
-
-    public void setCreationTime(Date creationTime) {
-        this.creationTime = creationTime;
-    }
-
     @Override
     public String toString() {
         return "AdventureDto{" +
@@ -94,7 +82,6 @@ public class AdventureDto {
                 ", adventureType='" + adventureType + '\'' +
                 ", imgUrl='" + imgUrl + '\'' +
                 ", score=" + score +
-                ", creationTime=" + creationTime +
                 '}';
     }
 }

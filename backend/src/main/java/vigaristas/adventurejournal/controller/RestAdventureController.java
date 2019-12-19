@@ -15,6 +15,8 @@ import vigaristas.adventurejournal.persistence.model.Adventure;
 import vigaristas.adventurejournal.services.AdventureService;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -50,6 +52,34 @@ public class RestAdventureController {
         }
 
         return new ResponseEntity<>(adventureToAdventureDto.convert(adventure), HttpStatus.OK);
+    }
+    
+    @GetMapping("/list")
+    public ResponseEntity<List<AdventureDto>> listAdventure(){
+        
+        return new ResponseEntity<>(adventureToAdventureDto.convert(
+                adventureService.getList()),
+                HttpStatus.OK);
+    }
+
+
+    @PutMapping("/score/{id}/{vote}")
+    public ResponseEntity<HttpStatus> scoreMan(@PathVariable Integer id, @PathVariable String vote){
+
+
+        Adventure adventure = adventureService.get(id);
+        AdventureDto adventureDto = adventureToAdventureDto.convert(adventure);
+
+        if(vote.equals("up")){
+            adventureDto.setScore(adventureDto.getScore() + 1);
+            adventureService.save(adventureDtoToAdventure.convert(adventureDto));
+        }
+        if(vote.equals("down")){
+            adventureDto.setScore(adventureDto.getScore() - 1);
+            adventureService.save(adventureDtoToAdventure.convert(adventureDto));
+        }
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PostMapping("/add")

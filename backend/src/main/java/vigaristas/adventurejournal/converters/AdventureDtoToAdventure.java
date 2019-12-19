@@ -28,6 +28,6 @@ public class AdventureDtoToAdventure extends AbstractConverter<AdventureDto, Adv
         adventure.setScore(adventureDto.getScore());
         adventure.setAdventureType(adventureDto.getAdventureType());
 
-        return null;
+        return adventure;
     }
 }

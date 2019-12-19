@@ -34,4 +34,10 @@ public class AdventureServiceImpl implements AdventureService {
     public Adventure save(Adventure adventure) {
         return adventureDao.saveOrUpdate(adventure);
     }
+
+    @Transactional
+    public Adventure updateScore(Adventure adventure, String vote){
+
+        return null;
+    }
 }

@@ -14,7 +14,6 @@ public class AdventureToAdventureDto extends AbstractConverter<Adventure, Advent
 
         adventureDto.setTitle(adventure.getTitle());
         adventureDto.setsDisc(adventure.getsDesc());
-        adventureDto.setCreationTime(adventure.getCreationTime());
         adventureDto.setAdventureType(adventure.getAdventureType());
         adventureDto.setImgUrl(adventure.getImgUrl());
         adventureDto.setLocation(adventure.getLocation());
