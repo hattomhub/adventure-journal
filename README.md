@@ -8,7 +8,7 @@ Our MVP was a website where users could view and post adventures.
 ## // The Development
 We split our team in 2, where each party developed either the Frontend or the Backend of our WebAPP.
 The Backend dealt with creating a database and a Rest API using Spring MVC with Hibernate to map our model to the database.
-The Frontend handled the received data from the API using AJAX and React to present the pages and pop-ups.
+The Frontend handled the received data from the API using Axios and React to present the pages and pop-ups.
 
 ## // My Role
 I was primarily involved in frontend development and also contributed to peer programming in the early stages of our back end and business logic.
